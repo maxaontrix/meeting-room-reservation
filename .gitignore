@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+.env
+
+# Poetry
+.poetry/
+
+# VSCode/PyCharm
+.vscode/
+.idea/
+
+# Docker
+*.log
+*.pid
+*.db
+*.sock
+.env
+.env.*
+!.env.example
+
+# alembic
+alembic/versions/*.py
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+.cache/
+.tox/
+
+# mypy
+.mypy_cache/
+
+# test DB volume
+test_db_data/
+
+# Others
+dist/
+build/

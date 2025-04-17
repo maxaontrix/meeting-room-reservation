@@ -1,0 +1,16 @@
+FROM python:3.11-slim
+
+# Установка Poetry
+RUN pip install --no-cache-dir poetry
+
+# Создание рабочей директории
+WORKDIR /app
+
+# Копируем файлы проекта
+COPY . /app
+
+# Установка зависимостей
+RUN poetry config virtualenvs.create false && poetry install --no-interaction
+
+# Команда запуска
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
